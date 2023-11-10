@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --clr-accent: #6466E9;
+    --clr-bg-primary: #111729;
+    --clr-bg-secondary: #20293A;
+    --clr-mid: #4A5567;
+    --clr-darker: #98a3b7;
+    --clr-light: #ffffff;
+
+    --hsl-light: 0, 0%, 100%;
+}
+
+.author {
+    font-weight: 700;
+    color: var(--clr-light);
+}
+
+.tags {
+    font-size: 0.625rem;
+    color: var(--clr-accent);
+}
+
+.quote {
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    color: var(--clr-darker);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 16px;
+
+    min-height: 100vh;
+    padding: 1rem;
+
+    background-color: var(--clr-bg-primary);
+}
+
+.card {
+    max-width: 544px;
+
+    display: grid;
+    place-content: center;
+
+    padding: 14px 40px;
+
+    border-radius: 12px;
+    
+    background: url(img/bg-image-random-quote.svg) no-repeat bottom right;
+    background-color: var(--clr-bg-secondary);
+}
+
+.card > p {
+    text-align: center;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tag {
+    border: 1px solid var(--clr-accent);
+    border-radius: 100vh;
+    padding: 3px 11px;
+}
+
+.buttons {
+    width: fit-content;
+    height: 48px;
+
+    padding-inline: 6px;
+    margin-bottom: 24px;
+
+    display: flex;
+    gap: 9px;
+
+    border-radius: 12px;
+    border: 2px solid var(--clr-bg-secondary);
+}
+
+.separator {
+    width: 2px;
+    background-color: var(--clr-bg-secondary);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+button > img {
+    width: 32px;
+    transform: translateY(1px)
+}
+
+/* https://cssloaders.github.io/ */
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
